@@ -42,7 +42,7 @@ def get_sudo_user(module):
   sudo_user = os.environ.get('SUDO_USER')
 
   if not sudo_user:
-    rc, stdout, stderr = module.run_command('logname', check_rc=True)
+    rc, stdout, stderr = module.run_command('whoami', check_rc=True)
     sudo_user = stdout
 
   return sudo_user
