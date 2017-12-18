@@ -50,7 +50,7 @@ def get_sudo_user(module):
 def check_packages(module, pkgs, state):
   would_be_changed = []
 
-  for pkg in packages:
+  for pkg in pkgs:
     installed = package_installed(module, pkg)
     if (state == 'present' and not installed) or (state == 'absent' and installed):
       would_be_changed.append(pkg)
