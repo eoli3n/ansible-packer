@@ -121,7 +121,7 @@ def main():
     argument_spec = dict(
       name         = dict(required=True),
       state        = dict(default='present', choices=['present','absent']),
-      recurse      = dict(default='no', choices=BOOLEANS, type='bool')
+      recurse      = dict(default='no', choices=['yes', 'no'], type='bool')
     ),
     supports_check_mode = True
   )
